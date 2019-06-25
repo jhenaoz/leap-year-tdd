@@ -10,17 +10,47 @@ describe('Given a leap year calculator', () => {
             const isLeapYear = leapYear.isLeapYear(2000);
             // Assert
             expect(isLeapYear).toBeTruthy();
-            expect(isLeapYear).toBe(true);
         });
 
-        it('Then 2011 should not be leap year', () => {
+    });
 
+    describe('When the year is divisible by 100 but not by 400', () => {
+    //All years divisible by 100 but not by 400 are NOT leap years
+
+        it('Then 1700 should not be leap year', () => {
+            // Arrange
             const leapYear = new LeapYear();
+            // Act
+            const isLeapYear = leapYear.isLeapYear(1700);
+            // Assert
+            expect(isLeapYear).toBeFalsy();
+        });
 
-            const isLeapYear = leapYear.isLeapYear(2011);
+    });
+        
 
+    describe('When the year is divisible by 4 but not by 100 ', () => {
+    //All years divisible by 100 but not by 400 are NOT leap years
+        it('Then 2008 should be leap year', () => {
+            // Arrange
+            const leapYear = new LeapYear();
+            // Act
+            const isLeapYear = leapYear.isLeapYear(2008);
+            // Assert
             expect(isLeapYear).toBeTruthy();
-            expect(isLeapYear).toBe(false);
+        });
+
+    });
+
+    describe('When the year is divisible by 4', () => {
+        //All years not divisible by 4 are NOT leap years
+        it('Then 2017 should be leap year', () => {
+            // Arrange
+            const leapYear = new LeapYear();
+            // Act
+            const isLeapYear = leapYear.isLeapYear(2017);
+            // Assert
+            expect(isLeapYear).toBeFalsy();
         });
     });
 });
