@@ -44,7 +44,7 @@ describe('Given a leap year calculator', () => {
 
     describe('When the year is divisible by 4', () => {
         //All years not divisible by 4 are NOT leap years
-        it('Then 2017 should be leap year', () => {
+        it('Then 2017 should not be leap year', () => {
             // Arrange
             const leapYear = new LeapYear();
             // Act
