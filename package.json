@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pretest": "eslint src spec --fix",
     "test": "jasmine"
   },
   "repository": {
@@ -17,6 +18,9 @@
   },
   "homepage": "https://github.com/jhenaoz/leap-year-tdd#readme",
   "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
     "jasmine": "^3.4.0"
   }
 }
